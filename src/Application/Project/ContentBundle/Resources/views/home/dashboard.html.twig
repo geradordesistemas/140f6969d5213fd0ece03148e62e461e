@@ -1,0 +1,114 @@
+{% extends "@ApplicationProjectContent/base/base_web.html.twig" %}
+
+{% block title %}
+    list
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+{% endblock %}
+
+{% block javascriptsFooter %}
+    {{ parent() }}
+
+{% endblock %}
+
+
+{% block body %}
+    <div class="container" style="margin-top: 5%">
+        <div class="row">
+
+            <div class=col-4 style="margin-bottom: 10px;">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Módulo Empreendimento</h5>
+                        <p class="card-text">...</p>
+                        <a href="{{ path("web_empreendimento_list") }}" class="btn btn-primary">Ir para</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class=col-4 style="margin-bottom: 10px;">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Módulo Acompanhamento</h5>
+                        <p class="card-text">...</p>
+                        <a href="{{ path("web_acompanhamento_list") }}" class="btn btn-primary">Ir para</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class=col-4 style="margin-bottom: 10px;">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Módulo Banner</h5>
+                        <p class="card-text">...</p>
+                        <a href="{{ path("web_banner_list") }}" class="btn btn-primary">Ir para</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class=col-4 style="margin-bottom: 10px;">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Módulo Status</h5>
+                        <p class="card-text">...</p>
+                        <a href="{{ path("web_status_list") }}" class="btn btn-primary">Ir para</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class=col-4 style="margin-bottom: 10px;">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Módulo Tag</h5>
+                        <p class="card-text">...</p>
+                        <a href="{{ path("web_tag_list") }}" class="btn btn-primary">Ir para</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class=col-4 style="margin-bottom: 10px;">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Módulo CorretorOnline</h5>
+                        <p class="card-text">...</p>
+                        <a href="{{ path("web_corretorOnline_list") }}" class="btn btn-primary">Ir para</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class=col-4 style="margin-bottom: 10px;">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Módulo Realizacao</h5>
+                        <p class="card-text">...</p>
+                        <a href="{{ path("web_realizacao_list") }}" class="btn btn-primary">Ir para</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class=col-4 style="margin-bottom: 10px;">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Módulo Tipo</h5>
+                        <p class="card-text">...</p>
+                        <a href="{{ path("web_tipo_list") }}" class="btn btn-primary">Ir para</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+{% endblock %}
+
+
+
+

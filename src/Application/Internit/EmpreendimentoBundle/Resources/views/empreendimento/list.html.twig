@@ -1,0 +1,133 @@
+{% extends "@ApplicationProjectContent/base/base_web.html.twig" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
+
+{% block javascriptsFooter %}
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+    <div class="container" style="margin-top: 2%">
+        <h2>{{ title }}</h2>
+
+        <a href="{{ path("web_dashboard") }}" class="btn btn-secondary" >
+            Voltar
+        </a>
+        <a href="{{ path('web_empreendimento_create') }}" class="btn btn-primary" >
+            Cadastrar
+        </a>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">nome</th>
+                <th scope="col">nomeDestaque</th>
+                <th scope="col">url</th>
+                <th scope="col">valorVenda</th>
+                <th scope="col">visivel</th>
+                <th scope="col">fitness</th>
+                <th scope="col">destaqueHome</th>
+                <th scope="col">dataConclusao</th>
+                <th scope="col">breveDescricao</th>
+                <th scope="col">descricao</th>
+                <th scope="col">linkTourVirtual</th>
+                <th scope="col">linkHotsite</th>
+                <th scope="col">linkCorretor</th>
+                <th scope="col">linkAppIOS</th>
+                <th scope="col">linkAppAndroid</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for data in objects %}
+                <tr>
+                    <th scope="row">
+                        {{ data.id }}
+                    </th>
+                    <td>
+                        {{ data.nome }}
+                    </td>
+                    <td>
+                        {{ data.nomeDestaque }}
+                    </td>
+                    <td>
+                        {{ data.url }}
+                    </td>
+                    <td>
+                        {{ data.valorVenda }}
+                    </td>
+                    <td>
+                        {{ data.visivel }}
+                    </td>
+                    <td>
+                        {{ data.fitness }}
+                    </td>
+                    <td>
+                        {{ data.destaqueHome }}
+                    </td>
+                    <td>
+                        {{ data.dataConclusao }}
+                    </td>
+                    <td>
+                        {{ data.breveDescricao }}
+                    </td>
+                    <td>
+                        {{ data.descricao }}
+                    </td>
+                    <td>
+                        {{ data.linkTourVirtual }}
+                    </td>
+                    <td>
+                        {{ data.linkHotsite }}
+                    </td>
+                    <td>
+                        {{ data.linkCorretor }}
+                    </td>
+                    <td>
+                        {{ data.linkAppIOS }}
+                    </td>
+                    <td>
+                        {{ data.linkAppAndroid }}
+                    </td>
+                    <td>
+                        <a href="{{ path("web_empreendimento_show", { "id": data.id }) }}" class="btn btn-primary">
+                            Exibir
+                        </a>
+                        <a href="{{ path("web_empreendimento_edit", { "id": data.id }) }}" class="btn btn-warning">
+                            Editar
+                        </a>
+                        <a href="{{ path("web_empreendimento_delete", { "id": data.id }) }}" class="btn btn-danger" >
+                            Deletar
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
